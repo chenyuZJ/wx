@@ -1,0 +1,66 @@
+<view class="container">
+
+  <!-- 搜索框 -->
+  <view class="page__bd">
+    <view class="weui-search-bar">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+          <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+          <input type="text" class="weui-search-bar__input" placeholder="搜索歌曲、歌手" />
+          <view class="weui-icon-clear" wx:if="{{inputVal.length > 0}}">
+            <icon type="clear" size="14"></icon>
+          </view>
+        </view>
+        <label class="weui-search-bar__label" bindtap="go_search">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索歌曲、歌手</view>
+        </label>
+      </view>
+      <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+    </view>
+  </view>
+
+  <!-- 主题 -->
+  <view class="main">
+    <!-- 轮播图 -->
+    <swiper class="banner" indicator-dots="true" indicator-color="rgba(255,255,255,.3)" indicator-active-color="#fff" autoplay='true' interval='2000' circular='true'>
+      <block wx:for="{{banner}}" wx:key="*this">
+        <swiper-item data-id="{{index}}">
+          <image src="{{item}}" class="banner-img"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+
+  <!-- 电台 -->
+  <view class="radioStation">
+    <view class="radioStation_tit">电台</view>
+    <view class="radioStation_main clearfix">
+      <block wx:for="{{radioList}}" wx:key="*this">
+        <view class="radio_img" bindtap="getgedan">
+          <image src="{{item.picUrl}}" class="radioStation_img"></image>
+          <view class="radioStation_text">{{item.text}}</view>
+          <image src="../../img/play.png" class="radioStation_play"></image>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <!-- 热门歌单 -->
+  <view class="radioStation">
+    <view class="radioStation_tit">热门歌单</view>
+    <view class="radioStation_main clearfix">
+      <block wx:for="{{songList}}" wx:key="*this">
+        <view class="radio_img" bindtap="getgedan">
+          <image src="{{item.picUrl}}" class="radioStation_img"></image>
+          <view class="radioStation_text">{{item.text}}</view>
+          <view class="radioStation_text2">{{item.text2}}</view>
+          <image src="../../img/music.png" class="radioStation_icon"></image>
+          <image src="../../img/play.png" class="radioStation_play"></image>
+          <text class="radio_num">{{item.num}}</text>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  </view>
+</view>

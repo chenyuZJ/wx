@@ -1,0 +1,58 @@
+.play{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, .3)
+}
+.img{
+  width: 100%;
+  text-align: center;
+}
+.imgs{
+  margin-top: 30px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.bottom{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: rgba(0, 0, 0, .5);
+}
+.slider{
+  width: 520rpx;
+  float: left;
+  margin: 6px 3px;
+}
+.slider slider{
+  width: 90%;
+  margin-left: 5%;
+}
+.bottom image{
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+  margin-top:15px; 
+  margin-left: 10px;
+}
+.time{
+  width: 58px;
+  height: 100%;
+  float: left;
+  line-height: 50px;
+  font-size: 12px;
+  text-align: center;
+  color: white
+}
+.introduction{
+  text-align: center;
+  height: 45%;
+  overflow: hidden;
+}
+.ci{
+  font-size: 12px;
+  color: white;
+  line-height: 40px
+}

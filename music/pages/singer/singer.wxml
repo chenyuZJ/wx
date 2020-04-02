@@ -1,0 +1,18 @@
+<view class="container log-list">
+  <view class="list-group" wx:for="{{logs}}" wx:for-item="group" wx:key="*this" animation="{{animation}}">
+      <view class="title" data-id="{{group.title}}" >{{group.title}}</view>
+      <block wx:for="{{group.items}}" wx:for-item="user" wx:key="*this">
+        <view class="list-group-item">
+          <image class="icon" src="{{user.avatar}}"></image>
+          <text class="log-item">{{user.name}}</text>
+        </view>
+      </block>
+</view>
+
+<!-- 侧边字母导航 -->
+<view class="list-shortcut">
+  <block wx:for="{{logs}}" wx:key="*this">
+    <text data-id="{{item.title}}" bindtap="zimu">{{item.title}}</text>
+  </block>
+</view>
+</view>

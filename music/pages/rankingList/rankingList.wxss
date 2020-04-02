@@ -1,0 +1,41 @@
+.rank {
+  padding-bottom: 40rpx;
+}
+.list {
+  position: relative;
+  display: flex;
+  margin: 0 40rpx;
+  padding-top: 40rpx;
+  height: 200rpx;
+}
+.list image.picUrl {
+  width: 200rpx;
+  height: 200rpx;
+}
+.list  image.radio_icon {
+  position: absolute;
+  width:40rpx;
+  height:40rpx;
+  left:14rpx;
+  bottom:10rpx;
+}
+.list .listNum {
+  position:absolute;
+  left:70rpx;
+  bottom:10rpx;
+  color:#fff;
+  font-size:12px;
+}
+.list .songList {
+  height: 200rpx;
+  overflow: hidden;
+  background: #fff;
+  color: hsla(0,0%,100%,.3);
+  font-size: 12px;
+}
+.list .songList .song {
+  overflow: hidden;
+  line-height: 70rpx;
+  color:#000;
+  margin-left: 10px;
+}
